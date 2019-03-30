@@ -1,0 +1,673 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fumysam</title>
+	<link rel="stylesheet" href="themes/fumysam.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<style>
+	.warning {
+		background-color: #f0ad4e;
+		display: inline;
+		padding: .2em .6em .3em;
+		font-size: 75%;
+		font-weight: 700;
+		line-height: 1;
+		color: #fff;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: baseline;
+		border-radius: .25em;
+	}
+	.success{
+		background-color: #5cb85c;
+		display: inline;
+		padding: .2em .6em .3em;
+		font-size: 75%;
+		font-weight: 700;
+		line-height: 1;
+		color: #fff;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: baseline;
+		border-radius: .25em;
+	}
+	.danger{
+		background-color: #d9534f;
+		display: inline;
+		padding: .2em .6em .3em;
+		font-size: 75%;
+		font-weight: 700;
+		line-height: 1;
+		color: #fff;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: baseline;
+		border-radius: .25em;
+	}
+	</style>
+</head>
+<body>
+	<script>
+		function cotizar(){
+			location.href ="index.html";
+		}
+		function posponer(){
+			$( "#popPosponer" ).popup("open");
+		}
+	</script>
+	<div data-role="page" id="paginaGrillaPrincipalCotizaciones">
+	  <div data-role="header" data-position="fixed" data-theme="a">
+		<h1>Fumysam</h1>
+		<a href="#" rel="external" data-icon="lock" class="ui-btn-right">Salir</a>
+		<a href="#" rel="external" data-icon="home" class="ui-btn-left">Menú</a>
+	  </div>
+
+	  <div data-role="main" class="ui-content">
+	  	<h2 style="text-align: center;">Cotizaciones</h2>
+	  	<br>
+	  	<form>
+			<input id="filtro_tabla_input" data-type="search" placeholder="Buscar cotizaciones...">
+		</form>
+		<table data-role="table" id="table-custom-2" data-filter="true" data-input="#filtro_tabla_input" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b">
+			 <thead>
+			   <tr class="ui-bar-d">
+				 <th>Cliente</th>
+			   </tr>
+			 </thead>
+			 <tbody>
+			   <tr>
+				 <td>
+				 	 <h2>LIPIGAS</h2>
+				 	 <p>La Serena, Camino a las parcelas #1234</p>
+				 	 <p>Fecha : 12-08-2017</p>
+				 	 <p>Hora : 10:30:00 - 11:30:00</p>
+				 	 <div data-role="collapsible" data-theme="a" data-content-theme="a">
+					   <h3>Detalle</h3>
+					   <p>Contacto 1: Juan Perez</p>
+					   <p>Fono 1: +051 614187</p>
+					   <p><span class="warning">Pendiente</span></p>
+					   <br>
+				 	   <a href="#" onClick="cotizar();" class="ui-btn ui-corner-all ui-shadow ui-icon-eye ui-btn-icon-left">Cotizar</a>
+				 	   <a href="#" onClick="posponer();" class="ui-btn ui-corner-all ui-shadow ui-icon-clock ui-btn-icon-left">Posponer</a>
+				 	<br>
+					</div>
+				 </td>
+			   </tr>
+			   <tr>
+				 <td>
+				 	 <h2>AGUAS DEL VALLE</h2>
+				 	 <p>La Serena, Camino a las parcelas #1234</p>
+				 	 <p>Fecha : 12-08-2017</p>
+				 	 <p>Hora : 10:30:00 - 11:30:00</p>
+				 	 <div data-role="collapsible" data-theme="a" data-content-theme="a">
+					   <h3>Detalle</h3>
+					   <p>Contacto 1: Juan Perez</p>
+					   <p>Fono 1: +051 614187</p>
+					   <p><span class="warning">Pendiente</span></p>
+					    <br>
+						 <a href="#" onClick="cotizar();" class="ui-btn ui-corner-all ui-shadow ui-icon-eye ui-btn-icon-left">Cotizar</a>
+						 <a href="#" onClick="posponer();" class="ui-btn ui-corner-all ui-shadow ui-icon-clock ui-btn-icon-left">Posponer</a>
+						 <br>
+					</div>
+				 </td>
+			   </tr>
+			   <tr>
+				 <td>
+				 	 <h2>NOPOLEO</h2>
+				 	 <p>La Serena, Camino a las parcelas #1234</p>
+				 	 <p>Fecha : 12-08-2017</p>
+				 	 <p>Hora : 10:30:00 - 11:30:00</p>
+				 	 <div data-role="collapsible" data-theme="a" data-content-theme="a">
+					   <h3>Detalle</h3>
+					   <p>Contacto 1: Juan Perez</p>
+				 	   <p>Fono 1: +051 614187</p>
+					   <p><span class="success">Completada</span></p>
+					 </div>
+				 	 <br>
+				 </td>
+			   </tr>
+			   <tr>
+				 <td>
+				 	 <h2>NOPOLEO</h2>
+				 	 <p>La Serena, Camino a las parcelas #1234</p>
+				 	 <p>Fecha : 12-08-2017</p>
+				 	 <p>Hora : 10:30:00 - 11:30:00</p>
+				 	 <div data-role="collapsible" data-theme="a" data-content-theme="a">
+					   <h3>Detalle</h3>
+					   <p>Contacto 1: Juan Perez</p>
+				 	   <p>Fono 1: +051 614187</p>
+					   <p><span class="danger">Pospuesta</span></p>
+					 </div>
+				 	 <br>
+				 </td>
+			   </tr>
+			 </tbody>
+		   </table>
+		   
+		   
+		   
+		   
+		   
+		   <!------------------PopUp Posponer-------------------------------------->
+			<div data-role="popup" id="popPosponer" data-overlay-theme="b" data-theme="b">
+				<div data-role="header" data-theme="a">
+				<h1>Posponer visita</h1>
+				</div>
+				<div role="main" class="ui-content">
+					<h3 class="ui-title">Motivo de posponer</h3>
+					<div data-role="fieldcontain">
+					   <select name="select-choice-1" id="select-choice-1">
+						  <option value="standard">Atraso</option>
+						  <option value="rush">Por petición del cliente</option>
+						  <option value="rush">Cliente no encontrado</option>
+					   </select>
+					</div>
+
+					<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancelar</a>
+					<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Posponer</a>
+				</div>
+			</div>
+			<!------------------/PopUp Posponer------------------------------------->
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaTipoDeCliente" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Agregar Cliente no planificado</a>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="paginaTipoDeCliente">
+	  <div data-role="header" data-position="fixed">
+		<h1>Fumysam</h1>
+	  </div>
+      <br>
+      <br>
+	  <div data-role="main" class="ui-content">
+		
+			<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+				<h3>Tipo de Cliente</h3>
+				<form method="post" action="#">
+				  <fieldset data-role="controlgroup">
+						<legend><strong>Seleccione el Tipo de Cliente* :</strong></legend>
+							<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked">
+							<label for="radio-choice-1">Empresa</label>
+							<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2">
+							<label for="radio-choice-2">Hogar</label>
+					</fieldset>
+				</form>
+			</div>
+		    <br>
+		    <br>
+		    <br>
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaGrillaPrincipalCotizaciones" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-left">Cancelar</a>
+		  <a href="#paginaDatosCliente" class="ui-btn ui-corner-all ui-shadow ui-icon-arrow-r ui-btn-icon-left">Siguiente</a>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	
+	
+	 
+	  <div data-role="page" id="paginaDatosCliente">
+	  <div data-role="header" data-position="fixed">
+		<h1>Fumysam</h1>
+	  </div>
+	  <br>
+      <br>
+	  <div data-role="main" class="ui-content">
+		
+			<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+				<h3>Datos del Cliente</h3>
+				<form method="post" action="#">
+				  <label for="fname"><strong>Nombre del Cliente* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Razón Social :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Rut :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <br>
+				  <label for="fname"><strong>Pregunta 1 :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Pregunta 2 :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Pregunta 3 :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				</form>
+			</div>
+		    <br>
+		    <br>
+		    <br>
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaGrillaPrincipalCotizaciones" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-left">Cancelar</a>
+		  <a href="#paginaTipoDeCliente" class="ui-btn ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-left">Atrás</a>
+		  <a href="#paginaDireccionesCliente" class="ui-btn ui-corner-all ui-shadow ui-icon-arrow-r ui-btn-icon-left">Siguiente</a>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<style>
+	.ui-selectmenu.ui-popup .ui-input-search {
+		margin-left: .5em;
+		margin-right: .5em;
+	}
+	.ui-selectmenu.ui-dialog .ui-content {
+		padding-top: 0;
+	}
+	.ui-selectmenu.ui-dialog .ui-selectmenu-list {
+		margin-top: 0;
+	}
+	.ui-selectmenu.ui-popup .ui-selectmenu-list li.ui-first-child .ui-btn {
+		border-top-width: 1px;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+	}
+	.ui-selectmenu.ui-dialog .ui-header {
+		border-bottom-width: 1px;
+	}
+	</style>
+	<script>
+		$.mobile.document
+		// "filter-menu-menu" is the ID generated for the listview when it is created
+		// by the custom selectmenu plugin. Upon creation of the listview widget we
+		// want to prepend an input field to the list to be used for a filter.
+		.on( "listviewcreate", "#filter-menu-menu", function( e ) {
+			var input,
+				listbox = $( "#filter-menu-listbox" ),
+				form = listbox.jqmData( "filter-form" ),
+				listview = $( e.target );
+			// We store the generated form in a variable attached to the popup so we
+			// avoid creating a second form/input field when the listview is
+			// destroyed/rebuilt during a refresh.
+			if ( !form ) {
+				input = $( "<input data-type='search'></input>" );
+				form = $( "<form></form>" ).append( input );
+				input.textinput();
+				$( "#filter-menu-listbox" )
+					.prepend( form )
+					.jqmData( "filter-form", form );
+			}
+			// Instantiate a filterable widget on the newly created listview and
+			// indicate that the generated input is to be used for the filtering.
+			listview.filterable({ input: input });
+		})
+		// The custom select list may show up as either a popup or a dialog,
+		// depending how much vertical room there is on the screen. If it shows up
+		// as a dialog, then the form containing the filter input field must be
+		// transferred to the dialog so that the user can continue to use it for
+		// filtering list items.
+		//
+		// After the dialog is closed, the form containing the filter input is
+		// transferred back into the popup.
+		.on( "pagebeforeshow pagehide", "#filter-menu-dialog", function( e ) {
+			var form = $( "#filter-menu-listbox" ).jqmData( "filter-form" ),
+				placeInDialog = ( e.type === "pagebeforeshow" ),
+				destination = placeInDialog ? $( e.target ).find( ".ui-content" ) : $( "#filter-menu-listbox" );
+			form
+				.find( "input" )
+				// Turn off the "inset" option when the filter input is inside a dialog
+				// and turn it back on when it is placed back inside the popup, because
+				// it looks better that way.
+				.textinput( "option", "inset", !placeInDialog )
+				.end()
+				.prependTo( destination );
+		});
+	</script>
+	<div data-role="page" id="paginaDireccionesCliente">
+	  <div data-role="header" data-position="fixed">
+		<h1>Fumysam</h1>
+	  </div>
+	  <br>
+      <br>
+	  <div data-role="main" class="ui-content">
+		
+			
+		    <a href="#paginaAgregarDireccionCliente" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Agregar dirección</a>
+			<br>
+			<table data-role="table" id="table-custom-2" data-mode="columntoggle" data-filter="true" data-input="#filtro_tabla_input" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columnas a mostrar..." data-column-popup-theme="a">
+			 <thead>
+			   <tr class="ui-bar-d">
+				 <th>Dirección</th>
+				 <th data-priority="2">Comuna</th>
+				 <th data-priority="1">Sector</th>
+				 <th>Seleccionar</th>
+			   </tr>
+			 </thead>
+			 <tbody>
+			   <tr>
+				 <th>OSORNO #1258</th>
+				 <td>Coquimbo</td>
+				 <td>Tierras Blancas</td>
+				 <td>
+					<select name="slider-flip-m" id="slider-flip-m" data-role="slider" data-mini="true">
+						<option value="no">NO</option>
+						<option value="si" selected="">SI</option>
+					</select>
+				 </td>
+			   </tr>
+			   <tr>
+				 <th>BALMACEDA #1200</th>
+				 <td>La Serena</td>
+				 <td>Cuatro Esquinas</td>
+				 <td>
+					<select name="slider-flip-m" id="slider-flip-m" data-role="slider" data-mini="true">
+						<option value="no" selected="">NO</option>
+						<option value="si">SI</option>
+					</select>
+				 </td>
+			   </tr>
+			 </tbody>
+		   </table>
+			<br>
+		    <br>
+		    <br>
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaGrillaPrincipalCotizaciones" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-left">Cancelar</a>
+		  <a href="#paginaDatosCliente" class="ui-btn ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-left">Atrás</a>
+		  <a href="#paginaContactosCliente" class="ui-btn ui-corner-all ui-shadow ui-icon-arrow-r ui-btn-icon-left">Siguiente</a>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	<div data-role="page" id="paginaAgregarDireccionCliente">
+	  <div data-role="header" data-position="fixed">
+		<h1>Fumysam</h1>
+	  </div>
+	  <br>
+      <br>
+	  <div data-role="main" class="ui-content">
+		
+			<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+				<h3>Agregar direcciones del cliente</h3>
+				<form method="post" action="#">
+				  <label for="fname"><strong>Dirección* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Tº viaje* (HH:MM) :</strong></label>
+				  <input type="time" name="txt-tiempo-de-viaje" id="txt-tiempo-de-viaje" value="01:20:50">
+				  <label for="fname"><strong>Comuna-sector* :</strong></label>
+				   <select id="filter-menu" data-native-menu="false">
+						<option value="SFO">Coquimbo, Barrio Industrial</option>
+						<option value="LAX">Coquimbo, Parte Alta</option>
+						<option value="YVR">La Serena, Las Compañías Bajas</option>
+						<option value="YYZ">La Serena, Las Compañías Altas</option>
+					</select>
+				  <br>
+				  <br>
+				  <h3>Selecciona los días preferidos para el servicio</h3>
+				  <br>
+				  <table width="100%">
+				  	<thead>
+				  		<tr>
+				  			<th width="15%">Día</th>
+				  			<th>H. Inicio</th>
+				  			<th>H. Final</th>
+				  		</tr>
+				  	</thead>
+				  	<tbody>
+				  		<tr>
+				  			<td>
+                   				<input type="checkbox" name="checkbox-lunes" id="checkbox-lunes" class="custom" />
+                    			<label for="checkbox-lunes">Lunes</label>
+                            </td>
+				  			<td><input type="time" name="rango-inicio-hora-lunes" id="rango-inicio-hora-lunes"></td>
+				  			<td><input type="time" name="rango-final-hora-lunes" id="rango-final-hora-lunes"></td>
+				  		</tr>
+				  		<tr>
+				  			<td>
+                   				<input type="checkbox" name="checkbox-martes" id="checkbox-martes" class="custom" />
+                    			<label for="checkbox-martes">Martes</label>
+                            </td>
+				  			<td><input type="time" name="rango-inicio-hora-martes" id="rango-inicio-hora-martes"></td>
+				  			<td><input type="time" name="rango-final-hora-martes" id="rango-final-hora-martes"></td>
+				  		</tr>
+				  		<tr>
+				  			<td>
+                   				<input type="checkbox" name="checkbox-miercoles" id="checkbox-miercoles" class="custom" />
+                    			<label for="checkbox-miercoles">Miercoles</label>
+                            </td>
+				  			<td><input type="time" name="rango-inicio-hora-miercoles" id="rango-inicio-hora-miercoles"></td>
+				  			<td><input type="time" name="rango-final-hora-miercoles" id="rango-final-hora-miercoles"></td>
+				  		</tr>
+				  		<tr>
+				  			<td>
+                   				<input type="checkbox" name="checkbox-jueves" id="checkbox-jueves" class="custom" />
+                    			<label for="checkbox-jueves">Jueves</label>
+                            </td>
+				  			<td><input type="time" name="rango-inicio-hora-jueves" id="rango-inicio-hora-jueves"></td>
+				  			<td><input type="time" name="rango-final-hora-jueves" id="rango-final-hora-jueves"></td>
+				  		</tr>
+				  		<tr>
+				  			<td>
+                   				<input type="checkbox" name="checkbox-viernes" id="checkbox-viernes" class="custom" />
+                    			<label for="checkbox-viernes">Viernes</label>
+                            </td>
+				  			<td><input type="time" name="rango-inicio-hora-viernes" id="rango-inicio-hora-viernes"></td>
+				  			<td><input type="time" name="rango-final-hora-viernes" id="rango-final-hora-viernes"></td>
+				  		</tr>
+				  		<tr>
+				  			<td>
+                   				<input type="checkbox" name="checkbox-sabado" id="checkbox-sabado" class="custom" />
+                    			<label for="checkbox-sabado">Sábado</label>
+                            </td>
+				  			<td><input type="time" name="rango-inicio-hora-sabado" id="rango-inicio-hora-sabado"></td>
+				  			<td><input type="time" name="rango-final-hora-sabado" id="rango-final-hora-sabado"></td>
+				  		</tr>
+				  		<tr>
+				  			<td>
+                   				<input type="checkbox" name="checkbox-domingo" id="checkbox-domingo" class="custom" />
+                    			<label for="checkbox-domingo">Domingo</label>
+                            </td>
+				  			<td><input type="time" name="rango-inicio-hora-domingo" id="rango-inicio-hora-domingo"></td>
+				  			<td><input type="time" name="rango-final-hora-domingo" id="rango-final-hora-domingo"></td>
+				  		</tr>
+				  	</tbody>
+				  </table>
+				  
+				</form>
+			</div>
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaDireccionesCliente" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-left">Cancelar</a>
+		  <a href="#paginaDireccionesCliente" class="ui-btn ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left">Guardar</a>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="paginaContactosCliente">
+	  <div data-role="header" data-position="fixed">
+		<h1>Fumysam</h1>
+	  </div>
+	  <br>
+      <br>
+	  <div data-role="main" class="ui-content">
+			<h3>Agregar contactos del cliente</h3>
+			<br>
+			<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+				<h3>Contacto 1</h3>
+				<form method="post" action="#">
+				  <label for="fname"><strong>Nombre* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>E-mail* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Fono* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Celular* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Referencia* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <fieldset data-role="controlgroup">
+						<legend><strong>¿Desea que este contacto reciba la información por correo?</strong></legend>
+							<input type="radio" name="contacto-1" id="contacto-1-si" value="si" checked="checked">
+							<label for="contacto-1-si">Si</label>
+							<input type="radio" name="contacto-1" id="contacto-1-no" value="no">
+							<label for="contacto-1-no">No</label>
+				</fieldset>
+				</form>
+			</div>
+			<br>
+			<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+				<h3>Contacto 2</h3>
+				<form method="post" action="#">
+				  <label for="fname"><strong>Nombre* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>E-mail* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Fono* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Celular* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Referencia* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <fieldset data-role="controlgroup">
+						<legend><strong>¿Desea que este contacto reciba la información por correo?</strong></legend>
+							<input type="radio" name="contacto-2" id="contacto-2-si" value="si" checked="checked">
+							<label for="contacto-2-si">Si</label>
+							<input type="radio" name="contacto-2" id="contacto-2-no" value="no">
+							<label for="contacto-2-no">No</label>
+				</fieldset>
+				</form>
+			</div>
+			<br>
+			<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+				<h3>Contacto 3</h3>
+				<form method="post" action="#">
+				  <label for="fname"><strong>Nombre* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>E-mail* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Fono* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Celular* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Referencia* :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <fieldset data-role="controlgroup">
+						<legend><strong>¿Desea que este contacto reciba la información por correo?</strong></legend>
+							<input type="radio" name="contacto-3" id="contacto-3-si" value="si" checked="checked">
+							<label for="contacto-3-si">Si</label>
+							<input type="radio" name="contacto-3" id="contacto-3-no" value="no">
+							<label for="contacto-3-no">No</label>
+				</fieldset>
+				</form>
+			</div>
+			
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaGrillaPrincipalCotizaciones" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-left">Cancelar</a>
+		  <a href="#paginaDireccionesCliente" class="ui-btn ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-left">Atrás</a>
+		  <a href="#paginaPreguntaCotizacion" class="ui-btn ui-corner-all ui-shadow ui-icon-arrow-r ui-btn-icon-left">Siguiente</a>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="paginaPreguntaCotizacion">
+	  <div data-role="header" data-position="fixed">
+		<h1>Fumysam</h1>
+	  </div>
+	  <br>
+      <br>
+	  <div data-role="main" class="ui-content">
+			<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+				<fieldset data-role="controlgroup">
+						<legend><strong>¿Desea realizar la cotización para este cliente?* :</strong></legend>
+							<input type="radio" name="radio-pregunta-cotizar" id="radio-pregunta-cotizar-si" value="si" checked="checked">
+							<label for="radio-pregunta-cotizar-si">Si, el cliente se encuentra interesado</label>
+							<input type="radio" name="radio-pregunta-cotizar" id="radio-pregunta-cotizar-no" value="no">
+							<label for="radio-pregunta-cotizar-no">No, el cliente no esta interesado</label>
+							<input type="radio" name="radio-pregunta-cotizar" id="radio-pregunta-cotizar-no2" value="no2">
+							<label for="radio-pregunta-cotizar-no2">No, el cliente desea agendar para otra ocación</label> 
+				</fieldset>
+			</div>
+			
+			
+			
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaGrillaPrincipalCotizaciones" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-left">Cancelar</a>
+		  <a href="#paginaContactosCliente" class="ui-btn ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-left">Atrás</a>
+		  <a href="#paginaGrillaPrincipalCotizaciones" class="ui-btn ui-corner-all ui-shadow ui-icon-alert ui-btn-icon-left">Finalizar</a>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	 
+	   
+<script>
+	$(document).ready(function(){
+		$(document).bind( 'mobileinit', function(){
+		  $.mobile.loader.prototype.options.text = "Cargando";
+		  $.mobile.loader.prototype.options.textVisible = false;
+		  $.mobile.loader.prototype.options.theme = "a";
+		  $.mobile.loader.prototype.options.html = "";
+		});
+		////La siguiente linea de codigo es para evitar que las cabeceras se escondan
+		$("[data-role=header]").toolbar({ tapToggle: false });
+		
+	});
+	
+</script>
+</body>
+</html>

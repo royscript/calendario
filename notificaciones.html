@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+<button onclick="notifyMe()">Notify me!</button>
+</body>
+<script>
+class Notificar{
+	constructor(){ 
+		this.aprobacionNotificacion = false;
+		if (!("Notification" in window)) {
+			console.log("This browser does not support desktop notification");
+		}else if (Notification.permission === "granted") {
+			// Permiso Concedido para notificar
+			this.aprobacionNotificacion = true;
+		}else if (Notification.permission !== 'denied') {
+			  // Permiso rechazado para notificar
+			  Notification.requestPermission(function (permission) {
+			  // Si no tiene permiso pedirá permiso para notiticar
+			  if (permission === "granted") {
+				this.aprobacionNotificacion = true;
+			  }
+		});
+	  }
+	}
+	get verAprobacion(){
+		return this.aprobacionNotificacion;
+	}
+	set modificarAprobacion(valor){
+		this.aprobacionNotificacion = valor;
+	}
+	mensaje(mensaje,theBody,theIcon){
+		var options = {
+			  body: theBody,
+			  icon: theIcon
+		}
+		var notification = new Notification(mensaje,options);
+	}
+}
+var notificarEvento = new Notificar();
+if(notificarEvento.verAprobacion==true){
+	notificarEvento.mensaje("Evento de prueba","","logo-fumysam.jpg");
+}
+
+</script>
+</html>

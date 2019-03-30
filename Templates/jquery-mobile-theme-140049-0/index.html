@@ -1,0 +1,824 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cotización</title>
+	<link rel="stylesheet" href="themes/fumysam.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="paginaParametros">
+	  <div data-role="header" data-position="fixed" data-theme="a">
+		<h1>Cotización</h1>
+		<a href="#" rel="external" data-icon="lock" class="ui-btn-right">Salir</a>
+		<a href="grilla-principal-cotizacion.html" rel="external" data-icon="arrow-l" class="ui-btn-left">Atrás</a>
+		<div data-role="navbar" data-iconpos="left">
+		  <ul>
+			<li><a href="#paginaParametros" id="botonParametros" class="ui-btn-active ui-state-persist" data-icon="info">Parámetros</a></li>
+			<li><a href="#paginaDetalle" data-icon="bullets">Detalle</a></li>
+			<li><a href="#paginaAreasATratar" data-icon="location">Áreas</a></li>
+			<li><a href="#paginaPlanDeTrabajo" data-icon="bullets">Plan</a></li>
+			<li><a href="#paginaProgramacion" data-icon="bars">Programación</a></li>
+			<li><a href="#paginaMeses" data-icon="calendar">Meses</a></li>
+		  </ul>
+		</div>
+	  </div>
+	  <div data-role="main" class="ui-content">
+			<form method="post" action="/action_page_post.php">
+		  	  <label for="fname2"><strong>Cliente :</strong> NANTOCO</label>
+			  <p></p>
+			  <label for="fname2"><strong>Dirección :</strong> La Serena, Camino a las parcelas #1234.-</label>
+			  <p></p>
+			  <label for="fname2"><strong>Valor UF :</strong> 26632,7</label>
+			  <p></p>
+			  <label for="fname9"><strong>Tiempo Desratización por estación (minutos):</strong></label>
+			  <input type="text" name="fname" id="fname" value="2">
+			  <label for="fname8"><strong>Tiempo Desinsectación (minutos):</strong></label>
+			  <input type="text" name="fname" id="fname" value="6">
+			  <label for="fname4"><strong>Tiempo Sanitización :</strong></label>
+			  <input type="text" name="fname" id="fname" value="2">
+			  <fieldset data-role="controlgroup">
+					<legend><strong>Servicios :</strong></legend>
+					<input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+					<label for="checkbox-v-2a">Desratización</label>
+					<input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+					<label for="checkbox-v-2b">Desinsectación</label>
+					<input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+					<label for="checkbox-v-2c">Sanitización</label>
+					<input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
+					<label for="checkbox-v-2d">Monitoreo Lámparas UV</label>
+				</fieldset>
+			  <label for="fname4"><strong>Tiempo por cada visita :</strong></label>
+			  <input type="text" name="txt-tiempo-visita" id="txt-tiempo-visita" value="2">
+			  <label for="fname4"><strong>Tiempo por cada visita (1ª vez) :</strong></label>
+			  <input type="text" name="txt-tiempo-primera-visita" id="txt-tiempo-primera-visita" value="2">
+			</form>
+	  </div>
+
+	  
+	</div> 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="paginaDetalle">
+	  <div data-role="header" data-position="fixed">
+		<h1>Cotización</h1>
+		<a href="#" rel="external" data-icon="lock" class="ui-btn-right">Salir</a>
+		<a href="grilla-principal-cotizacion.html" rel="external" data-icon="arrow-l" class="ui-btn-left">Atrás</a>
+		<div data-role="navbar" data-iconpos="left">
+		  <ul>
+			<li><a href="#paginaParametros" id="botonParametros"  data-icon="info">Parámetros</a></li>
+			<li><a href="#paginaDetalle" class="ui-btn-active ui-state-persist" data-icon="bullets">Detalle</a></li>
+			<li><a href="#paginaAreasATratar" data-icon="location">Áreas</a></li>
+			<li><a href="#paginaPlanDeTrabajo" data-icon="bullets">Plan</a></li>
+			<li><a href="#paginaProgramacion" data-icon="bars">Programación</a></li>
+			<li><a href="#paginaMeses" data-icon="calendar">Meses</a></li>
+		  </ul>
+		</div>
+	  </div>
+	  <div data-role="main" class="ui-content">
+			<ul data-role="listview" data-theme="a" data-dividertheme="a" data-filter="true" data-filter-theme="a" data-filter-placeholder="Buscar detalles..." class="ui-group-theme-a ui-listview">
+				<li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-a ui-li-has-count ui-first-child">Detalle <span class="ui-li-count ui-body-inherit">2</span></li>
+				<li class="ui-li-has-alt ui-first-child">
+					<a href="#">
+						<h2>PLANTA NANTOCO</h2>
+						<p><strong>Estaciones :</strong> 100.</p>
+						<p><strong>Tº Traslado :</strong> 0 minutos.</p>
+						<p><strong>Tº DR :</strong> 200.</p>
+						<p><strong>Tº DS :</strong> 30.</p>
+						<p><strong>Tº SN :</strong> 20.</p>
+						<p><strong>Total :</strong> 250.</p>
+						<p><strong>Total Tº :</strong> 4,16.</p>
+						<p><strong>Total UF :</strong> 8.</p>
+						<p><h2>Neto : $ 221.939.-</h2></p>
+				    </a>
+					<a href="#popUpBorrarItemDetalle" data-rel="popup" data-position-to="window" data-transition="pop" aria-haspopup="true" aria-owns="popUpBorrarItemDetalle" aria-expanded="false" class="ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-a" title="Purchase album"></a>
+				</li>
+				<li class="ui-li-has-alt ui-first-child">
+					<a href="#">
+						<h2>FUNDO NANTOCO</h2>
+						<p><strong>Estaciones :</strong> 328.</p>
+						<p><strong>Tº Traslado :</strong> 0 minutos.</p>
+						<p><strong>Tº DR :</strong> 656.</p>
+						<p><strong>Tº DS :</strong> 120.</p>
+						<p><strong>Tº SN :</strong> 30.</p>
+						<p><strong>Total :</strong> 13.</p>
+						<p><strong>Total Tº :</strong> 806.</p>
+						<p><strong>Total UF :</strong> 26.9.</p>
+						<p><h2>Neto : $ 715.132.-</h2></p>
+				    </a>
+					<a href="#popUpBorrarItemDetalle" data-rel="popup" data-position-to="window" data-transition="pop" aria-haspopup="true" aria-owns="popUpBorrarItemDetalle" aria-expanded="false" class="ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-a" title="Purchase album"></a>
+				</li>
+			</ul>
+			<br>
+			<table style="float: right; margin-right: 5px;">
+				<tr style="text-align: left;">
+					<th>Total UF   : </th>
+					<td>85,5 UF</td>
+				</tr>
+				<tr style="text-align: left;">
+					<th>Total CLP : </th>
+					<td>$ 2.000.000</td>
+				</tr>
+			</table>
+			<!------------------PopUp Eliminar-------------------------------------->
+			<div data-role="popup" id="popUpBorrarItemDetalle" data-overlay-theme="b" data-theme="b">
+				<div data-role="header" data-theme="a">
+				<h1>Eliminar</h1>
+				</div>
+				<div role="main" class="ui-content" id="popUpBorrarItemDetalle_contenido_dialogo">
+					<h3 class="ui-title">Desea eliminar este item?</h3>
+
+					<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancelar</a>
+					<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Eliminar</a>
+				</div>
+			</div>
+			<!------------------/PopUp Eliminar------------------------------------->
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaAgregarDetalle" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Agregar Detalle</a>
+		</div>
+	  </div>
+	</div> 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="paginaAreasATratar">
+	  <div data-role="header" data-position="fixed">
+		<h1>Cotización</h1>
+		<a href="#" rel="external" data-icon="lock" class="ui-btn-right">Salir</a>
+		<a href="grilla-principal-cotizacion.html" rel="external" data-icon="arrow-l" class="ui-btn-left">Atrás</a>
+		<div data-role="navbar" data-iconpos="left">
+		  <ul>
+			<li><a href="#paginaParametros" id="botonParametros"  data-icon="info">Parámetros</a></li>
+			<li><a href="#paginaDetalle" data-icon="bullets">Detalle</a></li>
+			<li><a href="#paginaAreasATratar" class="ui-btn-active ui-state-persist" data-icon="location">Áreas</a></li>
+			<li><a href="#paginaPlanDeTrabajo" data-icon="bullets">Plan</a></li>
+			<li><a href="#paginaProgramacion" data-icon="bars">Programación</a></li>
+			<li><a href="#paginaMeses" data-icon="calendar">Meses</a></li>
+		  </ul>
+		</div>
+	  </div>
+	  <div data-role="main" class="ui-content">
+			<ul data-role="listview" data-theme="a" data-dividertheme="a" data-filter="true" data-filter-theme="a" data-filter-placeholder="Buscar áreas..." class="ui-group-theme-a ui-listview">
+				<li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-a ui-li-has-count ui-first-child">Áreas<span class="ui-li-count ui-body-inherit">2</span></li>
+				<li class="ui-li-has-alt ui-first-child">
+					<a href="#">
+						<p>Oficinas 2</p>
+				    </a>
+					<a href="#popUpBorrarItemArea" data-rel="popup" data-position-to="window" data-transition="pop" aria-haspopup="true" aria-owns="popUpBorrarItemArea" aria-expanded="false" class="ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-a" title="Purchase album"></a>
+				</li>
+				<li class="ui-li-has-alt ui-first-child">
+					<a href="#">
+						<p>Baños 2</p>
+				    </a>
+					<a href="#popUpBorrarItemArea" data-rel="popup" data-position-to="window" data-transition="pop" aria-haspopup="true" aria-owns="popUpBorrarItemArea" aria-expanded="false" class="ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-a" title="Purchase album"></a>
+				</li>
+			</ul>
+			<br>
+			
+			<!------------------PopUp Eliminar-------------------------------------->
+			<div data-role="popup" id="popUpBorrarItemArea" data-overlay-theme="b" data-theme="b">
+				<div data-role="header" data-theme="a">
+				<h1>Eliminar</h1>
+				</div>
+				<div role="main" class="ui-content" id="popUpBorrarItemArea_contenido_dialogo">
+					<h3 class="ui-title">Desea eliminar esta área?</h3>
+
+					<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancelar</a>
+					<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Eliminar</a>
+				</div>
+			</div>
+			<!------------------/PopUp Eliminar------------------------------------->
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaArea" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Agregar Área</a>
+		</div>
+	  </div>
+	</div> 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="paginaPlanDeTrabajo">
+	  <div data-role="header" data-position="fixed">
+		<h1>Cotización</h1>
+		<a href="#" rel="external" data-icon="lock" class="ui-btn-right">Salir</a>
+		<a href="grilla-principal-cotizacion.html" rel="external" data-icon="arrow-l" class="ui-btn-left">Atrás</a>
+		<div data-role="navbar" data-iconpos="left">
+		  <ul>
+			<li><a href="#paginaParametros" id="botonParametros"  data-icon="info">Parámetros</a></li>
+			<li><a href="#paginaDetalle" data-icon="bullets">Detalle</a></li>
+			<li><a href="#paginaAreasATratar" data-icon="location">Áreas</a></li>
+			<li><a href="#paginaPlanDeTrabajo" class="ui-btn-active ui-state-persist" data-icon="bullets">Plan</a></li>
+			<li><a href="#paginaProgramacion" data-icon="bars">Programación</a></li>
+			<li><a href="#paginaMeses" data-icon="calendar">Meses</a></li>
+		  </ul>
+		</div>
+	  </div>
+	  <div data-role="main" class="ui-content">
+			<ul data-role="listview" data-theme="a" data-dividertheme="a" data-filter="true" data-filter-theme="a" data-filter-placeholder="Buscar áreas..." class="ui-group-theme-a ui-listview">
+				<li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-a ui-li-has-count ui-first-child">La Serena, Camino a las parcelas #1234<span class="ui-li-count ui-body-inherit">3</span></li>
+				<li class="ui-li-has-alt ui-first-child">
+					<a href="#">
+						<p>Desinsectación, Desratización, Sanitización</p>
+			    		<p>en la 1ª visita</p>
+						<p>Desinsectación, Sanitización</p>
+			    		<p>en la 2ª visita</p>
+						<p>Monitoreo 3 Lamparas UV</p>
+			    		<p>en la 3ª visita</p>
+				    </a>
+					<a href="#popUpBorrarItemArea" data-rel="popup" data-position-to="window" data-transition="pop" aria-haspopup="true" aria-owns="popUpBorrarItemArea" aria-expanded="false" class="ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-a" title="Purchase album"></a>
+				</li>
+				
+				
+				<li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-a ui-li-has-count ui-first-child">La Serena, Avenida Cuatro esquinas #56 <span class="ui-li-count ui-body-inherit">3</span></li>
+				<li class="ui-li-has-alt ui-first-child">
+					<a href="#">
+						<p>Desinsectación, Desratización, Sanitización</p>
+			    		<p>en la 1ª visita</p>
+						<p>Desinsectación, Sanitización</p>
+			    		<p>en la 2ª visita</p>
+						<p>Monitoreo 3 Lamparas UV</p>
+			    		<p>en la 3ª visita</p>
+				    </a>
+					<a href="#popUpBorrarItemArea" data-rel="popup" data-position-to="window" data-transition="pop" aria-haspopup="true" aria-owns="popUpBorrarItemArea" aria-expanded="false" class="ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-a" title="Purchase album"></a>
+				</li>
+			</ul>
+			  <br>
+			<!------------------PopUp Eliminar-------------------------------------->
+			<div data-role="popup" id="popUpBorrarItemArea" data-overlay-theme="b" data-theme="b">
+				<div data-role="header" data-theme="a">
+				<h1>Eliminar</h1>
+				</div>
+				<div role="main" class="ui-content" id="popUpBorrarItemArea_contenido_dialogo">
+					<h3 class="ui-title">Desea eliminar esta área?</h3>
+
+					<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancelar</a>
+					<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Eliminar</a>
+				</div>
+			</div>
+			<!------------------/PopUp Eliminar------------------------------------->
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaAgregarPlan" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Agregar Plan</a>
+		  <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-mail ui-btn-icon-left">Enviar cotización</a>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="paginaProgramacion">
+	  <div data-role="header" data-position="fixed">
+		<h1>Cotización</h1>
+		<a href="#" rel="external" data-icon="lock" class="ui-btn-right">Salir</a>
+		<a href="grilla-principal-cotizacion.html" rel="external" data-icon="arrow-l" class="ui-btn-left">Atrás</a>
+		<div data-role="navbar" data-iconpos="left">
+		  <ul>
+			<li><a href="#paginaParametros" id="botonParametros"  data-icon="info">Parámetros</a></li>
+			<li><a href="#paginaDetalle" data-icon="bullets">Detalle</a></li>
+			<li><a href="#paginaAreasATratar" data-icon="location">Áreas</a></li>
+			<li><a href="#paginaPlanDeTrabajo" data-icon="bullets">Plan</a></li>
+			<li><a href="#paginaProgramacion" class="ui-btn-active ui-state-persist" data-icon="bars">Programación</a></li>
+			<li><a href="#paginaMeses" data-icon="calendar">Meses</a></li>
+		  </ul>
+		</div>
+	  </div>
+	  <div data-role="main" class="ui-content">
+	  		<ul data-role="listview" data-theme="a" data-dividertheme="a" class="ui-group-theme-a ui-listview">
+				<li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-a ui-li-has-count ui-first-child">Programa</li>
+				<li class="ui-li-has-alt ui-first-child">
+					<a href="#">
+						<p>Desinsectación, Desratización, Sanitización</p>
+			    		<p><strong>Nº visitas :</strong> 1</p>
+						<p><strong>Frecuencia :</strong> Mensual.</p>
+			    		<p><strong>Valor :</strong> 10 UF + IVA.-</p>
+				    </a>
+					<a href="#popUpBorrarItemArea" data-rel="popup" data-position-to="window" data-transition="pop" aria-haspopup="true" aria-owns="popUpBorrarItemArea" aria-expanded="false" class="ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-a" title="Purchase album"></a>
+				</li>
+				<li class="ui-li-has-alt ui-first-child">
+					<a href="#">
+						<p>Desinsectación, Desratización, Sanitización</p>
+			    		<p><strong>Nº visitas :</strong> 2 (2da visita desratización)</p>
+						<p><strong>Frecuencia :</strong> Mensual.</p>
+			    		<p><strong>Valor :</strong> 15 UF + IVA.-</p>
+				    </a>
+					<a href="#popUpBorrarItemArea" data-rel="popup" data-position-to="window" data-transition="pop" aria-haspopup="true" aria-owns="popUpBorrarItemArea" aria-expanded="false" class="ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-a" title="Purchase album"></a>
+				</li>
+				<li class="ui-li-has-alt ui-first-child">
+					<a href="#">
+						<p>Monitoreo 3 lamparas uv</p>
+			    		<p><strong>Nº visitas :</strong> 1</p>
+						<p><strong>Frecuencia :</strong> Mensual.</p>
+			    		<p><strong>Valor :</strong> 2,4 UF + IVA.-</p>
+				    </a>
+					<a href="#popUpBorrarItemArea" data-rel="popup" data-position-to="window" data-transition="pop" aria-haspopup="true" aria-owns="popUpBorrarItemArea" aria-expanded="false" class="ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-a" title="Purchase album"></a>
+				</li>
+			</ul>
+			  <br>
+			<!------------------PopUp Eliminar-------------------------------------->
+			<div data-role="popup" id="popUpBorrarItemArea" data-overlay-theme="b" data-theme="b">
+				<div data-role="header" data-theme="a">
+				<h1>Eliminar</h1>
+				</div>
+				<div role="main" class="ui-content" id="popUpBorrarItemArea_contenido_dialogo">
+					<h3 class="ui-title">Desea eliminar esta área?</h3>
+
+					<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancelar</a>
+					<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Eliminar</a>
+				</div>
+			</div>
+			<!------------------/PopUp Eliminar------------------------------------->
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaAgregarPrograma" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Agregar Programación</a>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="paginaMeses">
+	  <div data-role="header" data-position="fixed">
+		<h1>Cotización</h1>
+		<a href="#" rel="external" data-icon="lock" class="ui-btn-right">Salir</a>
+		<a href="grilla-principal-cotizacion.html" rel="external" data-icon="arrow-l" class="ui-btn-left">Atrás</a>
+		<div data-role="navbar" data-iconpos="left">
+		  <ul>
+			<li><a href="#paginaParametros" id="botonParametros"  data-icon="info">Parámetros</a></li>
+			<li><a href="#paginaDetalle" data-icon="bullets">Detalle</a></li>
+			<li><a href="#paginaAreasATratar" data-icon="location">Áreas</a></li>
+			<li><a href="#paginaPlanDeTrabajo" data-icon="bullets">Plan</a></li>
+			<li><a href="#paginaProgramacion" data-icon="bars">Programación</a></li>
+			<li><a href="#paginaMeses" class="ui-btn-active ui-state-persist" data-icon="calendar">Meses</a></li>
+		  </ul>
+		</div>
+	  </div>
+	  <div data-role="main" class="ui-content">
+			<ul data-role="listview" data-theme="a" data-dividertheme="a" data-filter="true" data-filter-theme="a" data-filter-placeholder="Buscar áreas..." class="ui-group-theme-a ui-listview">
+				<li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-a ui-li-has-count ui-first-child">La Serena, Camino a las parcelas #1234<span class="ui-li-count ui-body-inherit">3</span></li>
+				<li class="ui-li-has-alt ui-first-child">
+					<a href="#">
+						<p><strong>Enero</strong> (2)</p>
+			    		<p><strong>Marzo</strong> (1)</p>
+						<p><strong>Mayo</strong> (3)</p>
+				    </a>
+					<a href="#popUpBorrarItemArea" data-rel="popup" data-position-to="window" data-transition="pop" aria-haspopup="true" aria-owns="popUpBorrarItemArea" aria-expanded="false" class="ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-a" title="Purchase album"></a>
+				</li>
+				
+				
+				<li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-a ui-li-has-count ui-first-child">La Serena, Avenida Cuatro esquinas #56 <span class="ui-li-count ui-body-inherit">4</span></li>
+				<li class="ui-li-has-alt ui-first-child">
+					<a href="#">
+						<p><strong>Enero</strong> (1)</p>
+			    		<p><strong>Abril</strong> (1)</p>
+						<p><strong>Agosto</strong> (1)</p>
+			    		<p><strong>Diciembre</strong> (1)</p>
+				    </a>
+					<a href="#popUpBorrarItemArea" data-rel="popup" data-position-to="window" data-transition="pop" aria-haspopup="true" aria-owns="popUpBorrarItemArea" aria-expanded="false" class="ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-a" title="Purchase album"></a>
+				</li>
+			</ul>
+			<!------------------PopUp Eliminar-------------------------------------->
+			<div data-role="popup" id="popUpBorrarItemArea" data-overlay-theme="b" data-theme="b">
+				<div data-role="header" data-theme="a">
+				<h1>Eliminar</h1>
+				</div>
+				<div role="main" class="ui-content" id="popUpBorrarItemArea_contenido_dialogo">
+					<h3 class="ui-title">Desea eliminar esta área?</h3>
+
+					<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancelar</a>
+					<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Eliminar</a>
+				</div>
+			</div>
+			<!------------------/PopUp Eliminar------------------------------------->
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+	  	  <a href="#paginaAgregarMeses" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Agregar Meses</a>
+		  <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-mail ui-btn-icon-left">Enviar cotización</a>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="paginaAgregarDetalle">
+	  <div data-role="header" data-position="fixed">
+		<h1>Agregar Detalle Cotización</h1>
+	  </div>
+
+	  <div data-role="main" class="ui-content">
+		<div data-role="main" class="ui-content">
+			<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+				<form method="post" action="#">
+				  <label for="fname"><strong>Nº Estaciones :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Nombre :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Tº Traslado :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Tº Desratización :</strong> 123</label>
+				  <p></p>
+				  <label for="fname"><strong>Tº Desinsectación :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Tº Sanitización :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				</form>
+			</div>
+			<br>
+			<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+				<form method="post" action="#">
+				  <label for="fname"><strong>Total :</strong></label>
+				  <label for="fname"><strong>Total UF :</strong></label>
+				  <label for="fname"><strong>Neto :</strong></label>
+				</form>
+			</div>
+		  </div>
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaDetalle" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-left">Cancelar</a>
+		  <a href="#paginaDetalle" class="ui-btn ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left">Guardar</a>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="paginaArea">
+	  <div data-role="header" data-position="fixed">
+		<h1>Área a Tratar</h1>
+	  </div>
+
+	  <div data-role="main" class="ui-content">
+		<div data-role="main" class="ui-content">
+			<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+				<form method="post" action="#">
+				  <label for="fname"><strong>Nombre :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				  <label for="fname"><strong>Cantidad :</strong></label>
+				  <input type="text" name="fname" id="fname">
+				</form>
+			</div>
+			<br>
+		  </div>
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaAreasATratar" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-left">Cancelar</a>
+		  <a href="#paginaAreasATratar" class="ui-btn ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left">Guardar</a>
+		</div>
+	  </div>
+	</div>
+
+
+
+
+	<div data-role="page" id="paginaAgregarPlan">
+	  <div data-role="header" data-position="fixed">
+		<h1>Agregar Plan de Trabajo</h1>
+	  </div>
+
+	  <div data-role="main" class="ui-content">
+		<div data-role="main" class="ui-content">
+			<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+				<form method="post" action="#">
+			  	  <fieldset data-role="controlgroup">
+					<legend><strong>Servicios a realizar *</strong></legend>
+					<input type="checkbox" name="servicios-a-realizar-en-el-plan-1" id="servicios-a-realizar-en-el-plan-1">
+					<label for="servicios-a-realizar-en-el-plan-1">Desratización</label>
+					<input type="checkbox" name="servicios-a-realizar-en-el-plan-2" id="servicios-a-realizar-en-el-plan-2">
+					<label for="servicios-a-realizar-en-el-plan-2">Desinsectación</label>
+					<input type="checkbox" name="servicios-a-realizar-en-el-plan-3" id="servicios-a-realizar-en-el-plan-3">
+					<label for="servicios-a-realizar-en-el-plan-3">Sanitización</label>
+					<input type="checkbox" name="servicios-a-realizar-en-el-plan-4" id="servicios-a-realizar-en-el-plan-4">
+					<label for="servicios-a-realizar-en-el-plan-4">Monitoreo Lámparas UV</label>
+				 </fieldset>
+				  <label for="detalle"><strong>Detalle (no es obligatorio) :</strong></label>
+				  <textarea name="detalle" id="detalle"></textarea>
+				  <label for="select-choice-0" class="select">¿En que visita se realizará el servicio? *</label>
+					<select name="en-que-visita-se-realizara-el-servicio" id="en-que-visita-se-realizara-el-servicio">
+					   <option value="1">1ª</option>
+					   <option value="2">2ª</option>
+					   <option value="3">3ª</option>
+					   <option value="4">4ª</option>
+					   <option value="5">5ª</option>
+					   <option value="6">6ª</option>
+					   <option value="7">7ª</option>
+					</select>
+				  <label for="select-choice-0" class="select">¿En que lugar se realizará el servicio? *</label>
+					<select name="en-que-lugar-se-realizara-el-servicio" id="en-que-lugar-se-realizara-el-servicio">
+					   <option value="1">La Serena, Camino a las Parcelas #123</option>
+					   <option value="2">La Serena, Avenida Cuatro Esquinas #56</option>
+					</select>
+				</form>
+			</div>
+			<br>
+		  </div>
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaPlanDeTrabajo" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-left">Cancelar</a>
+		  <a href="#paginaPlanDeTrabajo" class="ui-btn ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left">Guardar</a>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="paginaAgregarPrograma">
+	  <div data-role="header" data-position="fixed">
+		<h1>Agregar Programa</h1>
+	  </div>
+
+	  <div data-role="main" class="ui-content">
+		<div data-role="main" class="ui-content">
+			<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+				<form method="post" action="#">
+			  	  <fieldset data-role="controlgroup">
+					<legend><strong>Servicios a realizar *</strong></legend>
+					<input type="checkbox" name="servicios-a-realizar-en-el-plan-1" id="servicios-a-realizar-en-el-plan-1">
+					<label for="servicios-a-realizar-en-el-plan-1">Desratización</label>
+					<input type="checkbox" name="servicios-a-realizar-en-el-plan-2" id="servicios-a-realizar-en-el-plan-2">
+					<label for="servicios-a-realizar-en-el-plan-2">Desinsectación</label>
+					<input type="checkbox" name="servicios-a-realizar-en-el-plan-3" id="servicios-a-realizar-en-el-plan-3">
+					<label for="servicios-a-realizar-en-el-plan-3">Sanitización</label>
+					<input type="checkbox" name="servicios-a-realizar-en-el-plan-4" id="servicios-a-realizar-en-el-plan-4">
+					<label for="servicios-a-realizar-en-el-plan-4">Monitoreo Lámparas UV</label>
+				 </fieldset>
+				  <label for="detalle"><strong>Nº visitas *:</strong></label>
+				  <input type="number" name="numero-visitas" id="numero-visitas">
+				  <label for="select-choice-0" class="select">Frecuencia *:</label>
+					<select name="frecuencia" id="frecuencia">
+					   <option value="Mensual">Mensual</option>
+					   <option value="Trimestral">Trimestral</option>
+					</select>
+				  <label for="detalle"><strong>Valor *:</strong></label>
+				  <input type="number" name="numero-visitas" id="numero-visitas">
+				  <label for="select-choice-0" class="select">Moneda *:</label>
+					<select name="frecuencia" id="frecuencia">
+					   <option value="UF + IVA.-">UF + IVA.-</option>
+					   <option value="CLP + IVA.-">CLP + IVA.-</option>
+					</select>
+				</form>
+			</div>
+			<br>
+		  </div>
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaProgramacion" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-left">Cancelar</a>
+		  <a href="#paginaProgramacion" class="ui-btn ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left">Guardar</a>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="paginaAgregarMeses">
+	  <div data-role="header" data-position="fixed">
+		<h1>Agregar Meses</h1>
+	  </div>
+
+	  <div data-role="main" class="ui-content">
+		<div data-role="main" class="ui-content">
+			<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+				<form method="post" action="#">
+				  <label for="select-choice-0" class="select">Seleccione el lugar *</label>
+					<select name="en-que-lugar-se-realizara-el-servicio" id="en-que-lugar-se-realizara-el-servicio">
+					   <option value="1">La Serena, Camino a las Parcelas #123</option>
+					   <option value="2">La Serena, Avenida Cuatro Esquinas #56</option>
+					</select>
+					<table width="100%">
+						<thead>
+							<tr>
+								<th width="15%">Mes</th>
+								<th>Cantidad</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox-enero" id="checkbox-enero" class="custom" />
+									<label for="checkbox-enero">Enero</label>
+								</td>
+								<td><input type="number" name="cantidad-enero" id="cantidad-enero"></td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox-febrero" id="checkbox-febrero" class="custom" />
+									<label for="checkbox-febrero">Febrero</label>
+								</td>
+								<td><input type="number" name="cantidad-febrero" id="cantidad-febrero"></td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox-marzo" id="checkbox-marzo" class="custom" />
+									<label for="checkbox-marzo">Marzo</label>
+								</td>
+								<td><input type="number" name="cantidad-marzo" id="cantidad-marzo"></td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox-abril" id="checkbox-abril" class="custom" />
+									<label for="checkbox-abril">Abril</label>
+								</td>
+								<td><input type="number" name="cantidad-abril" id="cantidad-abril"></td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox-mayo" id="checkbox-mayo" class="custom" />
+									<label for="checkbox-mayo">Mayo</label>
+								</td>
+								<td><input type="number" name="cantidad-mayo" id="cantidad-mayo"></td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox-junio" id="checkbox-junio" class="custom" />
+									<label for="checkbox-junio">Junio</label>
+								</td>
+								<td><input type="number" name="cantidad-junio" id="cantidad-junio"></td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox-julio" id="checkbox-julio" class="custom" />
+									<label for="checkbox-julio">Julio</label>
+								</td>
+								<td><input type="number" name="cantidad-julio" id="cantidad-julio"></td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox-agosto" id="checkbox-agosto" class="custom" />
+									<label for="checkbox-agosto">Agosto</label>
+								</td>
+								<td><input type="number" name="cantidad-agosto" id="cantidad-agosto"></td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox-septiembre" id="checkbox-septiembre" class="custom" />
+									<label for="checkbox-septiembre">Septiembre</label>
+								</td>
+								<td><input type="number" name="cantidad-septiembre" id="cantidad-septiembre"></td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox-octubre" id="checkbox-octubre" class="custom" />
+									<label for="checkbox-octubre">Octubre</label>
+								</td>
+								<td><input type="number" name="cantidad-octubre" id="cantidad-octubre"></td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox-noviembre" id="checkbox-noviembre" class="custom" />
+									<label for="checkbox-noviembre">Noviembre</label>
+								</td>
+								<td><input type="number" name="cantidad-noviembre" id="cantidad-noviembre"></td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox-diciembre" id="checkbox-diciembre" class="custom" />
+									<label for="checkbox-diciembre">Diciembre</label>
+								</td>
+								<td><input type="number" name="cantidad-diciembre" id="cantidad-diciembre"></td>
+							</tr>
+						</tbody>
+					  </table>
+				</form>
+			</div>
+			<br>
+		  </div>
+	  </div>
+
+	  <div data-role="footer" style="text-align:center;" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal">
+		  <a href="#paginaMeses" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-left">Cancelar</a>
+		  <a href="#paginaMeses" class="ui-btn ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left">Guardar</a>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+<script>
+	function eliminar(){
+		$("#popUpBorrarItemDetalle").html("Cerrar Sesión");
+		/*
+		+'<a href="logout_despacho.php?cerrar_trabajo_diario_del_vehiculo" onclick="objeto_despacho.cerrar_finalizando();" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b">Finalizar despachos y salir</a>'
+		*/
+		$("#popUpBorrarItemDetalle_contenido_dialogo").html('<h3 class="ui-title">Desea eliminar este item?</h3>'
+				+'<a href="logout_despacho.php" onclick="borrarRegistro();" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b">Eliminar</a>'
+				+'<a href="#" onclick="cancelar();" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b">Cancelar</a>');
+		$( "#popUpBorrarItemDetalle" ).popup("open");
+	}
+	function borrarRegistro(){
+		$( "#popUpBorrarItemDetalle" ).popup("close");
+		
+	}
+	function cancelar(){
+		$( "#popUpBorrarItemDetalle" ).popup("close");
+	}
+	$(document).ready(function(){
+		$(document).bind( 'mobileinit', function(){
+		  $.mobile.loader.prototype.options.text = "Cargando";
+		  $.mobile.loader.prototype.options.textVisible = false;
+		  $.mobile.loader.prototype.options.theme = "a";
+		  $.mobile.loader.prototype.options.html = "";
+		});
+		 
+		$("#paginaParametros").on("pageshow", function() {
+		  
+		});
+		////La siguiente linea de codigo es para evitar que las cabeceras se escondan
+		//$("[data-role=header]").toolbar({ tapToggle: false });
+		
+	});
+	
+</script>
+</body>
+</html>

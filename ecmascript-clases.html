@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+</body>
+<script>
+class Documento{
+	constructor(){
+	}
+	escribir(valor){
+		document.write(valor);
+	}
+}
+
+
+class Persona extends Documento{//Extends sirve para heredar atributos de otra clase
+    //En este espacio ya no se pueden declarar variables
+	constructor(nombrePersona){//En el constructor se declaran todas las variables globales de la clase, afuera ya no se hace
+	    super();//Para que no existan errores de sintaxis debemos inicializar el constructor de la clase padre con la siguiente linea de código
+		//Si no hay clase padre, no es necesario inicializar la clase padre porque no existe
+		this.nombre = nombrePersona;
+	}
+	saludar(){
+		var saludo = this.nombre+' dice: ¡Hola!';
+		super.escribir(saludo);//con la palabra super llamamos el método de la clase padre llamado escribir
+	}
+	ciclo(){
+		for(var x=0; x<10;x++){
+			document.write("<br>"+x);
+		}
+	}
+}
+var persona1 = new Persona('Roy');
+persona1.saludar();
+persona1.ciclo();
+</script>
+</html>
